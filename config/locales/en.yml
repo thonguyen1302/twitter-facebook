@@ -1,0 +1,21 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  devise:
+    mailer:
+      confirmation_instructions:
+        subject: 'Hello everybody!'
+        user_subject: 'Hello User! Please confirm your email'
+      reset_password_instructions:
+        subject: 'Reset instructions'
+
+    sessions:
+      user:
+      signed_in: 'Welcome user, you are signed in.'
+
+      admin:
+      signed_in: 'Hello admin!'
+
+      signed_in: 'Signed in successfully.'
+      
