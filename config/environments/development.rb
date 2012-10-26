@@ -14,9 +14,10 @@ Devise2::Application.configure do
           :password => "matmam85"
       }
 
-      Paperclip.options[:command_path] = "/usr/local/bin/"
 
-    config.action_mailer.raise_delivery_errors = true
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # Settings specified here will take precedence over those in config/application.rb

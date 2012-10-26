@@ -1,5 +1,28 @@
 <h1>Listing products</h1>
 
+<%= form_tag products_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
+<div id="facets">
+  <h3>Published</h3>
+  <ul>
+    <% for row in @search.facet(:publish_month).rows %>
+      <li>
+        <% if params[:month].blank? %>
+          <%= link_to row.title, :month => row.title %> (<%=  %>)
+        <% else %>
+          <strong><%= row.title %></strong> (<%= link_to "remove", :month => nil %>)
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
 <table>
   <tr>
     <th>Title</th>

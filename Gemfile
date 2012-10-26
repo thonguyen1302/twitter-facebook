@@ -1,5 +1,11 @@
 source 'http://rubygems.org'
 
+gem 'progress_bar'
+
+gem 'sunspot_rails'
+
+gem 'sunspot_solr'
+
 gem 'omniauth'
 
 gem 'omniauth-twitter'

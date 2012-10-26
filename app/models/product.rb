@@ -17,4 +17,22 @@ class Product < ActiveRecord::Base
     end
    end
 
+  # search product by title
+  searchable do
+    text :title
+
+    string :publish_month
+  end
+
+
+
+def publish_month
+  
+end
+
+
+
+
+
+
 end

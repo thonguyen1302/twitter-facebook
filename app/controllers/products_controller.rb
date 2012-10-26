@@ -3,7 +3,17 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    
+    @search = Sunspot.search(Product) do
+      
+      fulltext params[:search]
+
+      facet(:publish_month)
+      with(:publish_month, params[:month]) if params[:month].present?
+    end
+
+    @products =  @search.results
+
 
     respond_to do |format|
       format.html # index.html.erb
